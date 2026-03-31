@@ -29,4 +29,18 @@ spec:
         valueFrom:
           secretKeyRef:
             name: Secret
-            key: mongo-password 
+            key: mongo-password
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+spec:
+  selector:
+    app.kubernetes.io/name: mongo
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 27017
+
