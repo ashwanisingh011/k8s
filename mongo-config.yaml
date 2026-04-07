@@ -4,3 +4,5 @@ metadata:
   name: mongo-config
 data:
   mongo-url: mongo-service
+  mongo-port: "27017"
+  
